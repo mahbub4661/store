@@ -1,0 +1,19 @@
+// Add your item data here
+const diamondData = [
+    { name: "25 Diamonds", price: "22", status: "Instant" },
+    { name: "50 Diamonds", price: "38", status: "Instant" },
+    { name: "115 Diamonds", price: "83", status: "Instant" },
+    { name: "Weekly Membership", price: "165", status: "Active" },
+    { name: "Monthly Membership", price: "820", status: "Active" }
+];
+
+const tableBody = document.getElementById('priceTable');
+
+diamondData.forEach(item => {
+    let row = `<tr>
+        <td>${item.name}</td>
+        <td>${item.price} Tk</td>
+        <td style="color: #00ff88;">${item.status}</td>
+    </tr>`;
+    tableBody.innerHTML += row;
+});
